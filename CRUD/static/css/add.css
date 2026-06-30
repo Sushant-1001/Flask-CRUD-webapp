@@ -1,0 +1,40 @@
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+}
+
+h1{
+    text-align: center;
+}
+
+form {
+    background: white;
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+input, select {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+input[type="submit"] {
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button{
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

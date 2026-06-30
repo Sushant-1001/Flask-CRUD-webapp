@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Users</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/add.css')}}">
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="add-container">
+        
+        <h1>Add User</h1>
+
+        <form action="{{ url_for('insert') }}" method="POST">
+            
+            <label >name</label><br>
+            <input type="text" name="name" placeholder="name" required><br>
+
+            <label >surname</label><br>
+            <input type="text" name="surname" placeholder="surname" required><br>
+            
+            <label >email</label><br>
+            <input type="email" name="email" placeholder="email" required><br>
+            
+            <label >mobile</label><br>
+            <input type="text" name="mobile" placeholder="mobile" required><br>
+            
+            <label>age</label><br>
+            <input type="number" name="age" placeholder="age" required><br>
+
+
+            <label>gender</label><br>
+            <select name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit" value="Save">Save</button>
+
+
+        </form>
+    
+    </div>
+
+
+</body>
+</html>

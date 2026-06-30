@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Users</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/view.css')}}">
+
+</head>
+<body>    
+
+    {% include 'navbar.html' %}
+
+    <h1>ALL USERS</h1>
+
+    <table border="1">
+    <tr>    
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    {% for user in users %}   <!--- this is for loop which collects data from database  --->
+    <tr>
+        <td>{{user[0]}}</td>
+        <td>{{user[1]}}</td>
+        <td>{{user[2]}}</td>
+        <td>{{user[3]}}</td>
+        <td>{{user[4]}}</td>
+        <td>{{user[5]}}</td>
+        <td>{{user[6]}}</td>
+        <td><a href="{{url_for('edit', id=user[0])}}">Edit</a></td>
+        <td><a href="{{url_for('delete', id=user[0])}}">Delete</a></td>
+    </tr>
+
+
+    {% endfor %}  <!--- end of for loop --->
+    </table>
+
+
+</body>
+</html>

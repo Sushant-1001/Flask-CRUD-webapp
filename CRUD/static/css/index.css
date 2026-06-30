@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* keeps buttons centered */
+    gap: 10px;             /* space between buttons */
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+}
+
+button:hover {
+    background: #b97629;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit User</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}">
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="edit-container">
+
+    <h1>Edit User</h1>
+
+    <form action="{{ url_for('update', id=user[0]) }}" method="POST">
+
+        <label>Name</label><br>
+        <input type="text" name="name" value="{{ user[1] }}" required><br><br>
+
+        <label>Surname</label><br>
+        <input type="text" name="surname" value="{{ user[2] }}" required><br><br>
+
+        <label>Email</label><br>
+        <input type="email" name="email" value="{{ user[3] }}" required><br><br>
+
+        <label>Mobile</label><br>
+        <input type="text" name="mobile" value="{{ user[4] }}" required><br><br>
+
+        <label>Age</label><br>
+        <input type="number" name="age" value="{{ user[5] }}" required><br><br>
+
+        <label>Gender</label><br>
+
+        <select name="gender">
+
+            <option value="Male"
+            {% if user[6]=='Male' %}selected{% endif %}>
+            Male
+            </option>
+
+            <option value="Female"
+            {% if user[6]=='Female' %}selected{% endif %}>
+            Female
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Update">
+
+    </form>
+    
+    </div>
+
+</body>
+
+</html>
